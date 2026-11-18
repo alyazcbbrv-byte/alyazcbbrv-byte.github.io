@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<title>Alyaz Cabbarova: CV</title>
+<style>
+  @page { size: A4; margin: 14mm 15mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Calibri, Arial, sans-serif; color: #1f2933; font-size: 10pt; line-height: 1.42; margin: 0; }
+  header { border-bottom: 3px solid #2a9d8f; padding-bottom: 8px; margin-bottom: 10px; }
+  h1 { margin: 0; font-size: 24pt; color: #14213d; letter-spacing: .3px; }
+  .role { font-size: 12pt; color: #2a9d8f; font-weight: 600; margin-top: 2px; }
+  .contact { margin-top: 6px; font-size: 9.5pt; color: #3d4a5c; }
+  .contact span { margin-right: 14px; }
+  h2 { font-size: 11pt; color: #14213d; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #d7dde5; padding-bottom: 2px; margin: 14px 0 6px; }
+  .skills { display: grid; grid-template-columns: 150px 1fr; gap: 3px 10px; }
+  .skills b { color: #14213d; }
+  .proj { margin-bottom: 7px; page-break-inside: avoid; }
+  .proj .t { font-weight: 700; color: #14213d; }
+  .proj .s { color: #6b7785; font-size: 9pt; }
+  .proj ul { margin: 2px 0 0 16px; padding: 0; }
+  a { color: #14213d; text-decoration: none; }
+  .note { color: #6b7785; font-size: 8.5pt; margin-top: 10px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Alyaz Cabbarova</h1>
+  <div class="role">Data analitik</div>
+  <div class="contact">
+    <span>Bakı, Azərbaycan</span>
+    <span>alyazcbbrv@gmail.com</span>
+    <span>linkedin.com/in/alyaz-cabbarova-450a6140b</span>
+    <span>github.com/alyazcbbrv-byte</span>
+  </div>
+</header>
+
+<h2>Xülasə</h2>
+<p>Xam biznes datasını təmizləyir, modelləşdirir, ölçür və dashboard-larla nəticəyə çevirirəm. Power BI və DAX, SQL, Python (pandas) və Excel ilə işləyirəm. Datanı istifadə etməzdən əvvəl yoxlayıram: məsələn, mağaza layihəmdə planın əslində satışın 29 gün gecikmiş nüsxəsi olduğunu aşkar etdim. Hər layihəmi tapıntı, tövsiyə və məhdudiyyətlərlə sənədləşdirirəm.</p>
+
+<h2>Bacarıqlar</h2>
+<div class="skills">
+  <b>BI və dashboard</b><span>Power BI, DAX (zaman intellekti, kohort və churn ölçüləri), Power Query (M), ulduz sxemi, PBIP/TMDL</span>
+  <b>SQL</b><span>Join, subquery, CTE (rekursiv daxil), window funksiyaları, sxem dizaynı, bütövlük yoxlamaları</span>
+  <b>Python</b><span>pandas, NumPy, matplotlib, seaborn, SciPy, statsmodels, Jupyter, openpyxl</span>
+  <b>Excel</b><span>SUMIFS, INDEX/MATCH, data validation, nativ qrafiklər, düsturla işləyən dashboard</span>
+  <b>Statistika</b><span>Hipotez testləri (chi-square, Kruskal-Wallis, Mann-Whitney, Spearman), bootstrap, RFM, Pareto, proqnoz və backtest</span>
+  <b>Digər</b><span>Git/GitHub, data keyfiyyəti yoxlamaları, ETL, sənədləşdirmə (iki dildə: Azərbaycan və ingilis)</span>
+</div>
+
+<h2>Layihələr</h2>
+
+<div class="proj"><div class="t">Mağaza şəbəkəsi: satış, plan və churn analizi <span class="s">· Power BI, DAX, Python</span></div>
+<ul><li>274 mağaza, 50 region, 4 illik gündəlik data (113,829 sətir); ulduz sxemi, 25 DAX ölçüsü, 3 səhifəli dashboard.</li>
+<li>Planın hər mağaza və gün üçün satışın 29 gün gecikmiş nüsxəsi olduğunu aşkar etdim: "plan icrası" real hədəfə çatmanı yox, aylıq dəyişməni göstərirdi.</li>
+<li>Artımın mənbəyi mağaza başına satışdır (+144%); 274 mağazanın 66%-i bağlanıb, median ömür 500 gündür.</li></ul></div>
+
+<div class="proj"><div class="t">Toyota satış dashboard-u <span class="s">· Power BI, DAX</span></div>
+<ul><li>672,765 əməliyyat, 157 ölkə üzrə 3 səhifəli hesabat (satış xəritəsi, stok, Avropa analizi).</li>
+<li>Keyfiyyət yoxlamasında yanlış 54% YoY rəqəmini (düzgünü 34.8%), ay sıralamasını və təkrarlanan filtrləri düzəltdim.</li></ul></div>
+
+<div class="proj"><div class="t">Amazon satış analizi <span class="s">· Python, pandas, Power BI</span></div>
+<ul><li>672 min əməliyyat: ETL, illik artım 22% (CAGR), artım əməliyyat sayından gəlir; üç kateqoriya satışın 69%-ni verir.</li></ul></div>
+
+<div class="proj"><div class="t">SQL ilə HR analitikası <span class="s">· SQL (SQLite), Python</span></div>
+<ul><li>7 cədvəlli HR bazası, 32 biznes sorğusu: join, CTE, rekursiv CTE, window funksiyaları, 12 bütövlük yoxlaması.</li>
+<li>Satış şöbəsi maaş fondunun 44.5%-dir; "compa-ratio" ilə aşağı ödənilən vəzifələr və maaş sıxılması aşkarlandı.</li></ul></div>
+
+<div class="proj"><div class="t">Superstore mənfəət analizi <span class="s">· Python, pandas, SciPy</span></div>
+<ul><li>9,994 satış sətri: 20%-dən çox endirim 12% marjanı zərərə çevirir; sətirlərin 14%-i 135 min $ itirir, zərərli ştatlar çox endirim edilən ştatlardır.</li></ul></div>
+
+<div class="proj"><div class="t">RFM seqmentasiyası və satış proqnozu <span class="s">· Python, statsmodels, SciPy</span></div>
+<ul><li>850 müştəri: Champions və Loyal müştərilərin 46%-i, gəlirin 67%-ni verir; Pareto, kanal müqayisəsi (bootstrap), 3 üsullu proqnoz backtest-i (MAPE 12.5%); kənar qiymətin təsiri göstərilib.</li></ul></div>
+
+<div class="proj"><div class="t">Tələbə nəticələri: kəşfiyyat data analizi <span class="s">· Python, pandas, seaborn, SciPy</span></div>
+<ul><li>1,000 nəticə, 244 tələbə: F yalnız 60% və aşağı davamiyyətdə çıxır; ixtisaslar arasında statistik fərq yoxdur; sadə qayda tələbələrin 12%-ni risk qrupu kimi tapır.</li></ul></div>
+
+<div class="proj"><div class="t">Restoran satışı: interaktiv Excel dashboard <span class="s">· Excel</span></div>
+<ul><li>Makrosuz, yalnız SUMIFS düsturları ilə iki açılan filtr, KPI kartları və 5 qrafik; düsturlar ayrıca hesablama ilə yoxlanılıb.</li></ul></div>
+
+<p class="note">Bütün layihələr: github.com/alyazcbbrv-byte. Layihələrdə istifadə olunan datalar kurs nümunə datalarıdır.</p>
+</body>
+</html>
