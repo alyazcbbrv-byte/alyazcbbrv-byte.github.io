@@ -52,7 +52,7 @@ DATA = {
                 "5-ci sinifdə riyaziyyat və informatika tədris etmişəm."]),
             ("Onlayn dərslər", "5-9-cu siniflər", ["5-9-cu siniflərə onlayn dərslər keçmişəm."]),
             ("Onlayn repetitorluq", "müstəqil · hazırda", []),
-            ("SualCavab.com platforması", "ortaq müəllim · 5 ay", [
+            ("SualCavab.com platforması", "ortaq müəllim · 2026 iyul - noyabr (5 ay, davam edir)", [
                 "Riyaziyyat və informatika üzrə buraxılış, qəbul və sinif sualları hazırlayıram; bu günə qədər təxminən 2,000-ə yaxın sual hazırlamışam."]),
             ("YouTube kanalı «Math1era»", "müstəqil layihə · youtube.com/@memm_mova", [
                 "5-ci sinif riyaziyyatı üzrə 30 video dərs hazırlayıb yerləşdirmişəm: natural ədədlər, adi və onluq kəsrlər, faiz.",
@@ -111,7 +111,7 @@ DATA = {
                 "Taught mathematics and informatics in a 5th-grade class."]),
             ("Online lessons", "grades 5-9", ["Gave online lessons to grades 5-9."]),
             ("Online tutoring", "independent · current", []),
-            ("SualCavab.com platform", "partner teacher · 5 months", [
+            ("SualCavab.com platform", "partner teacher · July - November 2026 (5 months, ongoing)", [
                 "I prepare graduation, admission and class questions in mathematics and informatics; I have written about 2,000 questions so far."]),
             ("YouTube channel \"Math1era\"", "independent project · youtube.com/@memm_mova", [
                 "Created and published 30 video lessons for 5th-grade mathematics: natural numbers, common and decimal fractions, percentages.",
