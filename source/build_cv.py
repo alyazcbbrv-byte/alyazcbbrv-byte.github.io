@@ -18,6 +18,7 @@ from docx.shared import Mm, Pt, RGBColor
 OUT = Path(__file__).resolve().parent
 NAVY, TEAL = RGBColor(0x14, 0x21, 0x3D), RGBColor(0x2A, 0x9D, 0x8F)
 
+FULL_EXTRA = ["055-360-46-08", "Bakı / Baku, Yeni Yasamal", "youtube.com/@AlyazCabbarova"]
 CONTACT = ["Baku, Azerbaijan", "alyazcbbrv@gmail.com", "linkedin.com/in/alyaz-cabbarova-450a6140b", "github.com/alyazcbbrv-byte", "alyazcbbrv-byte.github.io"]
 
 DATA = {
@@ -27,19 +28,23 @@ DATA = {
         "name": "Alyaz Cabbarova",
         "role": "Data analitik",
         "contact": ["Bakı, Azərbaycan"] + CONTACT[1:],
-        "h": {"summary": "Xülasə", "skills": "Bacarıqlar", "edu": "Təhsil və kurslar", "proj": "Layihələr"},
-        "summary": "Data analitik kursunun tələbəsiyəm. Xam biznes datasını təmizləyir, modelləşdirir, ölçür və dashboard-larla nəticəyə çevirirəm. Power BI və DAX, SQL, Python (pandas) və Excel ilə işləyirəm. Datanı istifadə etməzdən əvvəl yoxlayıram: məsələn, mağaza layihəmdə planın əslində satışın 29 gün gecikmiş nüsxəsi olduğunu aşkar etdim. Hər layihəmi tapıntı, tövsiyə və məhdudiyyətlərlə sənədləşdirirəm.",
+        "h": {"summary": "Xülasə", "skills": "Bacarıqlar", "edu": "Təhsil və kurslar", "exp": "Təcrübə", "proj": "Layihələr"},
+        "summary": "Riyaziyyat və informatika təhsilindən data analitikaya keçirəm. Analitik və məntiqi düşüncəni təhsildən, texniki bacarıqları (Power BI, DAX, SQL, Python, Excel) isə kursda və GitHub-dakı 8 layihədə qazanmışam. Xam biznes datasını təmizləyir, modelləşdirir, ölçür və dashboard-larla nəticəyə çevirirəm. Power BI və DAX, SQL, Python (pandas) və Excel ilə işləyirəm. Datanı istifadə etməzdən əvvəl yoxlayıram: məsələn, mağaza layihəmdə planın əslində satışın 29 gün gecikmiş nüsxəsi olduğunu aşkar etdim. Hər layihəmi tapıntı, tövsiyə və məhdudiyyətlərlə sənədləşdirirəm.",
         "skills": [
             ("BI və dashboard", "Power BI, DAX (zaman intellekti, kohort və churn ölçüləri), Power Query (M), ulduz sxemi, PBIP/TMDL"),
             ("SQL", "Join, subquery, CTE (rekursiv daxil), window funksiyaları, sxem dizaynı, bütövlük yoxlamaları"),
             ("Python", "pandas, NumPy, matplotlib, seaborn, SciPy, statsmodels, Jupyter"),
             ("Excel", "SUMIFS, INDEX/MATCH, data validation, nativ qrafiklər, düsturla işləyən dashboard"),
             ("Statistika", "Hipotez testləri (chi-square, Kruskal-Wallis, Mann-Whitney, Spearman), bootstrap, RFM, Pareto, proqnoz və backtest"),
+            ("Proqramlar", "Word, PowerPoint, Excel, Teams, Zoom, Canva, GeoGebra, Desmos"),
+            ("Dillər", "Azərbaycan dili, İngilis dili"),
             ("Digər", "Git/GitHub, data keyfiyyəti yoxlamaları, ETL, iki dildə sənədləşdirmə (Azərbaycan, ingilis)"),
         ],
-        "edu": [("Data analitika kursu", "4 ay, davam edir · məşğulluq xidmətinin dəstəyi ilə",
+        "edu": [("Azərbaycan Dövlət Pedaqoji Universiteti (ADPU), Şəki filialı", "2020-2025", ["Riyaziyyat-İnformatika müəllimliyi"]), ("Data analitika kursu", "4 ay, davam edir · məşğulluq xidmətinin dəstəyi ilə",
                  ["Mövzular: Excel, Power BI və DAX, SQL, Python, statistika (Pareto, ABC/XYZ, RFM, kohort analizi, proqnoz).",
                   "Kurs tapşırıqlarını GitHub-da tam layihələrə çevirmişəm (aşağıda)."])],
+        "exp": [("Təhsil İdarəsi", "2024 mart-may · Təhsil Tələbə Kredit Fondunun təcrübə proqramı", []),
+                ("Şəki şəhər Fizika, Riyaziyyat və Humanitar Fənlər Təmayüllü Lisey", "2025 may-iyun · təcrübə", [])],
         "proj": [
             ("Mağaza şəbəkəsi: satış, plan və churn analizi", "Power BI, DAX, Python", [
                 "274 mağaza, 50 region, 4 illik gündəlik data (113,829 sətir); ulduz sxemi, 25 DAX ölçüsü, 3 səhifəli dashboard.",
@@ -70,19 +75,23 @@ DATA = {
         "name": "Alyaz Cabbarova",
         "role": "Data Analyst",
         "contact": CONTACT,
-        "h": {"summary": "Summary", "skills": "Skills", "edu": "Education and courses", "proj": "Projects"},
-        "summary": "Data analytics student. I clean, model and measure raw business data and turn it into decisions with dashboards, using Power BI and DAX, SQL, Python (pandas) and Excel. I check data before trusting it: in my retail project I found that the plan was an exact copy of sales lagged by 29 days. Every project is documented with findings, recommendations and limitations.",
+        "h": {"summary": "Summary", "skills": "Skills", "edu": "Education and courses", "exp": "Experience", "proj": "Projects"},
+        "summary": "Moving from mathematics and informatics education into data analytics. I built my analytical thinking through my degree and my technical skills (Power BI, DAX, SQL, Python, Excel) through a course and 8 projects on GitHub. I clean, model and measure raw business data and turn it into decisions with dashboards, using Power BI and DAX, SQL, Python (pandas) and Excel. I check data before trusting it: in my retail project I found that the plan was an exact copy of sales lagged by 29 days. Every project is documented with findings, recommendations and limitations.",
         "skills": [
             ("BI and dashboards", "Power BI, DAX (time intelligence, cohort and churn measures), Power Query (M), star schema, PBIP/TMDL"),
             ("SQL", "Joins, subqueries, CTEs (incl. recursive), window functions, schema design, integrity checks"),
             ("Python", "pandas, NumPy, matplotlib, seaborn, SciPy, statsmodels, Jupyter"),
             ("Excel", "SUMIFS, INDEX/MATCH, data validation, native charts, formula-driven dashboards"),
             ("Statistics", "Hypothesis tests (chi-square, Kruskal-Wallis, Mann-Whitney, Spearman), bootstrap, RFM, Pareto, forecasting and backtesting"),
+            ("Tools", "Word, PowerPoint, Excel, Teams, Zoom, Canva, GeoGebra, Desmos"),
+            ("Languages", "Azerbaijani, English"),
             ("Other", "Git/GitHub, data-quality checks, ETL, bilingual documentation (Azerbaijani, English)"),
         ],
-        "edu": [("Data analytics course", "4 months, ongoing · supported by an employment service programme",
+        "edu": [("Azerbaijan State Pedagogical University (ADPU), Sheki branch", "2020-2025", ["Teacher of Mathematics and Informatics"]), ("Data analytics course", "4 months, ongoing · supported by an employment service programme",
                  ["Topics: Excel, Power BI and DAX, SQL, Python, statistics (Pareto, ABC/XYZ, RFM, cohort analysis, forecasting).",
                   "I turned the course assignments into complete projects on GitHub (below)."])],
+        "exp": [("Education Department", "March-May 2024 · internship, Student Loan Fund programme", []),
+                ("Sheki City Lyceum of Physics, Mathematics and Humanities", "May-June 2025 · internship", [])],
         "proj": [
             ("Retail chain: sales, plan and churn analysis", "Power BI, DAX, Python", [
                 "274 stores, 50 regions, 4 years of daily data (113,829 rows); star schema, 25 DAX measures, 3-page dashboard.",
@@ -110,9 +119,9 @@ DATA = {
 }
 
 CSS = """
-@page { size: A4; margin: 13mm 15mm; }
+@page { size: A4; margin: 11mm 14mm; }
 * { box-sizing: border-box; }
-body { font-family: "Segoe UI", Calibri, Arial, sans-serif; color: #1f2933; font-size: 9.8pt; line-height: 1.4; margin: 0; }
+body { font-family: "Segoe UI", Calibri, Arial, sans-serif; color: #1f2933; font-size: 9.5pt; line-height: 1.36; margin: 0; }
 header { border-bottom: 3px solid #2a9d8f; padding-bottom: 7px; margin-bottom: 8px; }
 h1 { margin: 0; font-size: 25pt; color: #14213d; }
 .role { font-size: 12.5pt; color: #2a9d8f; font-weight: 600; margin-top: 1px; }
@@ -121,7 +130,7 @@ h1 { margin: 0; font-size: 25pt; color: #14213d; }
 h2 { font-size: 10.5pt; color: #14213d; text-transform: uppercase; letter-spacing: 1.2px; border-bottom: 1px solid #d7dde5; padding-bottom: 2px; margin: 12px 0 6px; }
 .skills { display: grid; grid-template-columns: 125px 1fr; gap: 2px 10px; }
 .skills b { color: #14213d; }
-.item { margin-bottom: 7px; page-break-inside: avoid; }
+.item { margin-bottom: 5px; page-break-inside: avoid; }
 .item .t { font-weight: 700; color: #14213d; }
 .item .s { color: #6b7785; font-size: 9pt; font-weight: 400; }
 ul { margin: 2px 0 0 15px; padding: 0; }
@@ -129,15 +138,25 @@ ul { margin: 2px 0 0 15px; padding: 0; }
 """
 
 
-def make_html(d: dict) -> str:
+def contact_of(d: dict, full: bool) -> list:
+    c = [x for x in d["contact"]]
+    if full:
+        c = [c[1], FULL_EXTRA[0], FULL_EXTRA[1]] + c[2:] + [FULL_EXTRA[2]]
+    return c
+
+
+def make_html(d: dict, full: bool = False) -> str:
     e = html.escape
     out = [f'<!doctype html><html lang="{d["lang"]}"><head><meta charset="utf-8"><title>{e(d["name"])}: CV</title><style>{CSS}</style></head><body>']
-    out.append(f'<header><h1>{e(d["name"])}</h1><div class="role">{e(d["role"])}</div><div class="contact">' + "".join(f"<span>{e(c)}</span>" for c in d["contact"]) + "</div></header>")
+    out.append(f'<header><h1>{e(d["name"])}</h1><div class="role">{e(d["role"])}</div><div class="contact">' + "".join(f"<span>{e(c)}</span>" for c in contact_of(d, full)) + "</div></header>")
     out.append(f'<h2>{d["h"]["summary"]}</h2><p>{e(d["summary"])}</p>')
     out.append(f'<h2>{d["h"]["skills"]}</h2><div class="skills">' + "".join(f"<b>{e(a)}</b><span>{e(b)}</span>" for a, b in d["skills"]) + "</div>")
     out.append(f'<h2>{d["h"]["edu"]}</h2>')
     for t, s, bl in d["edu"]:
         out.append(f'<div class="item"><div class="t">{e(t)} <span class="s">· {e(s)}</span></div><ul>' + "".join(f"<li>{e(b)}</li>" for b in bl) + "</ul></div>")
+    out.append(f'<h2>{d["h"]["exp"]}</h2>')
+    for t, s, bl in d["exp"]:
+        out.append(f'<div class="item"><div class="t">{e(t)} <span class="s">· {e(s)}</span></div></div>')
     out.append(f'<h2>{d["h"]["proj"]}</h2>')
     for t, s, bl in d["proj"]:
         out.append(f'<div class="item"><div class="t">{e(t)} <span class="s">· {e(s)}</span></div><ul>' + "".join(f"<li>{e(b)}</li>" for b in bl) + "</ul></div>")
@@ -153,7 +172,7 @@ def rule(par) -> None:
     b.append(bt); pPr.append(b)
 
 
-def make_docx(d: dict, path: Path) -> None:
+def make_docx(d: dict, path: Path, full: bool = True) -> None:
     doc = Document()
     sec = doc.sections[0]
     sec.page_width, sec.page_height = Mm(210), Mm(297)
@@ -172,7 +191,7 @@ def make_docx(d: dict, path: Path) -> None:
 
     para(d["name"], True, 24, NAVY, 0)
     para(d["role"], True, 12.5, TEAL, 2)
-    para("  ·  ".join(d["contact"]), size=9, after=4)
+    para("  ·  ".join(contact_of(d, full)), size=9, after=4)
     rule(doc.paragraphs[-1])
 
     def head(t):
@@ -192,6 +211,8 @@ def make_docx(d: dict, path: Path) -> None:
 
     head(d["h"]["edu"])
     for t, s, bl in d["edu"]: item(t, s, bl)
+    head(d["h"]["exp"])
+    for t, s, bl in d["exp"]: item(t, s, bl)
     head(d["h"]["proj"])
     for t, s, bl in d["proj"]: item(t, s, bl)
     para(d["note"], size=8.5, color=RGBColor(0x6B, 0x77, 0x85), before=8)
@@ -199,7 +220,12 @@ def make_docx(d: dict, path: Path) -> None:
 
 
 if __name__ == "__main__":
+    import sys
+    full_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else None   # private versions (phone, address, YouTube) go here, never into the repo
     for k, d in DATA.items():
-        (OUT / f"cv.{k}.html").write_text(make_html(d), encoding="utf-8")
-        make_docx(d, OUT / f"{d['file']}.docx")
+        (OUT / f"cv.{k}.html").write_text(make_html(d, False), encoding="utf-8")       # public version for the website
+        if full_dir:
+            full_dir.mkdir(parents=True, exist_ok=True)
+            (full_dir / f"cv.{k}.full.html").write_text(make_html(d, True), encoding="utf-8")
+            make_docx(d, full_dir / f"{d['file']}.docx", True)
         print("built", k)
