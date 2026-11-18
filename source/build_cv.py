@@ -151,7 +151,7 @@ h1 { margin: 0; font-size: 25pt; color: #14213d; }
 .contact { margin-top: 5px; font-size: 9pt; color: #3d4a5c; }
 .contact span { margin-right: 12px; display: inline-block; }
 header > div:first-child { flex: 1; min-width: 0; }
-h2 { font-size: 10.5pt; color: #14213d; text-transform: uppercase; letter-spacing: 1.2px; border-bottom: 1px solid #d7dde5; padding-bottom: 2px; margin: 12px 0 6px; }
+h2 { break-after: avoid; font-size: 10.5pt; color: #14213d; text-transform: uppercase; letter-spacing: 1.2px; border-bottom: 1px solid #d7dde5; padding-bottom: 2px; margin: 12px 0 6px; }
 .skills { display: grid; grid-template-columns: 125px 1fr; gap: 2px 10px; }
 .skills b { color: #14213d; }
 .item { margin-bottom: 5px; page-break-inside: avoid; }
@@ -185,7 +185,7 @@ def make_html(d: dict, full: bool = False, photo: Path | None = None) -> str:
     out.append(f'<h2>{d["h"]["exp"]}</h2>')
     for t, s, bl in d["exp"]:
         out.append(f'<div class="item"><div class="t">{e(t)} <span class="s">· {e(s)}</span></div>' + ("<ul>" + "".join(f"<li>{e(b)}</li>" for b in bl) + "</ul>" if bl else "") + "</div>")
-    out.append(f'<h2>{d["h"]["proj"]}</h2>')
+    out.append(f'<h2 style="break-before: page">{d["h"]["proj"]}</h2>')
     for t, s, bl in d["proj"]:
         out.append(f'<div class="item"><div class="t">{e(t)} <span class="s">· {e(s)}</span></div><ul>' + "".join(f"<li>{e(b)}</li>" for b in bl) + "</ul></div>")
     out.append(f'<p class="note">{e(d["note"])}</p></body></html>')
@@ -259,6 +259,7 @@ def make_docx(d: dict, path: Path, full: bool = True, photo: Path | None = None)
     for t, s, bl in d["edu"]: item(t, s, bl)
     head(d["h"]["exp"])
     for t, s, bl in d["exp"]: item(t, s, bl)
+    doc.add_page_break()
     head(d["h"]["proj"])
     for t, s, bl in d["proj"]: item(t, s, bl)
     para(d["note"], size=8.5, color=RGBColor(0x6B, 0x77, 0x85), before=8)
