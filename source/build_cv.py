@@ -19,7 +19,7 @@ OUT = Path(__file__).resolve().parent
 NAVY, TEAL = RGBColor(0x14, 0x21, 0x3D), RGBColor(0x2A, 0x9D, 0x8F)
 
 FULL_EXTRA = ["055-360-46-08", "Bakı / Baku, Yeni Yasamal"]
-CONTACT = ["Baku, Azerbaijan", "alyazcbbrv@gmail.com", "linkedin.com/in/alyaz-cabbarova-450a6140b", "github.com/alyazcbbrv-byte", "alyazcbbrv-byte.github.io"]
+CONTACT = ["Baku, Azerbaijan", "alyazcbbrv@gmail.com", "linkedin.com/in/alyaz-cabbarova-450a6140b", "github.com/alyazcbbrv-byte", "alyazcbbrv-byte.github.io", "youtube.com/@memm_mova"]
 
 DATA = {
     "az": {
@@ -44,7 +44,8 @@ DATA = {
                  ["Mövzular: Excel, Power BI və DAX, SQL, Python, statistika (Pareto, ABC/XYZ, RFM, kohort analizi, proqnoz).",
                   "Kurs tapşırıqlarını GitHub-da tam layihələrə çevirmişəm (aşağıda)."])],
         "exp": [("Təhsil İdarəsi", "2024 mart-may · Təhsil Tələbə Kredit Fondunun təcrübə proqramı", []),
-                ("Şəki şəhər Fizika, Riyaziyyat və Humanitar Fənlər Təmayüllü Lisey", "2025 may-iyun · təcrübə", [])],
+                ("Şəki şəhər Fizika, Riyaziyyat və Humanitar Fənlər Təmayüllü Lisey", "2025 may-iyun · təcrübə", []),
+                ("YouTube kanalı «Math1era»", "müstəqil layihə · youtube.com/@memm_mova", ["5-ci sinif riyaziyyatı üzrə 30 video dərs hazırlayıb yerləşdirmişəm: natural ədədlər, adi və onluq kəsrlər, faiz.", "48 abunəçi; ən çox izlənən video 549 baxışdır."])],
         "proj": [
             ("Mağaza şəbəkəsi: satış, plan və churn analizi", "Power BI, DAX, Python", [
                 "274 mağaza, 50 region, 4 illik gündəlik data (113,829 sətir); ulduz sxemi, 25 DAX ölçüsü, 3 səhifəli dashboard.",
@@ -91,7 +92,8 @@ DATA = {
                  ["Topics: Excel, Power BI and DAX, SQL, Python, statistics (Pareto, ABC/XYZ, RFM, cohort analysis, forecasting).",
                   "I turned the course assignments into complete projects on GitHub (below)."])],
         "exp": [("Education Department", "March-May 2024 · internship, Student Loan Fund programme", []),
-                ("Sheki City Lyceum of Physics, Mathematics and Humanities", "May-June 2025 · internship", [])],
+                ("Sheki City Lyceum of Physics, Mathematics and Humanities", "May-June 2025 · internship", []),
+                ("YouTube channel \"Math1era\"", "independent project · youtube.com/@memm_mova", ["Created and published 30 video lessons for 5th-grade mathematics: natural numbers, common and decimal fractions, percentages.", "48 subscribers; the most-watched video has 549 views."])],
         "proj": [
             ("Retail chain: sales, plan and churn analysis", "Power BI, DAX, Python", [
                 "274 stores, 50 regions, 4 years of daily data (113,829 rows); star schema, 25 DAX measures, 3-page dashboard.",
@@ -156,7 +158,7 @@ def make_html(d: dict, full: bool = False) -> str:
         out.append(f'<div class="item"><div class="t">{e(t)} <span class="s">· {e(s)}</span></div><ul>' + "".join(f"<li>{e(b)}</li>" for b in bl) + "</ul></div>")
     out.append(f'<h2>{d["h"]["exp"]}</h2>')
     for t, s, bl in d["exp"]:
-        out.append(f'<div class="item"><div class="t">{e(t)} <span class="s">· {e(s)}</span></div></div>')
+        out.append(f'<div class="item"><div class="t">{e(t)} <span class="s">· {e(s)}</span></div>' + ("<ul>" + "".join(f"<li>{e(b)}</li>" for b in bl) + "</ul>" if bl else "") + "</div>")
     out.append(f'<h2>{d["h"]["proj"]}</h2>')
     for t, s, bl in d["proj"]:
         out.append(f'<div class="item"><div class="t">{e(t)} <span class="s">· {e(s)}</span></div><ul>' + "".join(f"<li>{e(b)}</li>" for b in bl) + "</ul></div>")
