@@ -18,7 +18,7 @@ from docx.shared import Mm, Pt, RGBColor
 OUT = Path(__file__).resolve().parent
 NAVY, TEAL = RGBColor(0x14, 0x21, 0x3D), RGBColor(0x2A, 0x9D, 0x8F)
 
-FULL_EXTRA = ["055-360-46-08", "Bakı / Baku, Yeni Yasamal", "youtube.com/@AlyazCabbarova"]
+FULL_EXTRA = ["055-360-46-08", "Bakı / Baku, Yeni Yasamal"]
 CONTACT = ["Baku, Azerbaijan", "alyazcbbrv@gmail.com", "linkedin.com/in/alyaz-cabbarova-450a6140b", "github.com/alyazcbbrv-byte", "alyazcbbrv-byte.github.io"]
 
 DATA = {
@@ -141,7 +141,7 @@ ul { margin: 2px 0 0 15px; padding: 0; }
 def contact_of(d: dict, full: bool) -> list:
     c = [x for x in d["contact"]]
     if full:
-        c = [c[1], FULL_EXTRA[0], FULL_EXTRA[1]] + c[2:] + [FULL_EXTRA[2]]
+        c = [c[1], FULL_EXTRA[0], FULL_EXTRA[1]] + c[2:]
     return c
 
 
