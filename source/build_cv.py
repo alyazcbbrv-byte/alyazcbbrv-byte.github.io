@@ -51,7 +51,7 @@ DATA = {
             ("Şəki şəhər Fizika, Riyaziyyat və Humanitar Fənlər Təmayüllü Lisey", "2025 · təxminən 5 ay · müəllim təcrübəsi", [
                 "5-ci sinifdə dərs demişəm; 5-9-cu siniflərə onlayn dərslər keçmişəm."]),
             ("SualCavab.com platforması", "riyaziyyat və informatika müəllimi (sual hazırlayan)", [
-                "Riyaziyyat və informatika üzrə buraxılış, qəbul və sinif sualları hazırlayıram; bu günə qədər təxminən 2,000-ə yaxın sual hazırlanıb."]),
+                "Riyaziyyat və informatika üzrə buraxılış, qəbul və sinif sualları hazırlayıram; bu günə qədər təxminən 2,000-ə yaxın sual hazırlamışam."]),
             ("YouTube kanalı «Math1era»", "müstəqil layihə · youtube.com/@memm_mova", [
                 "5-ci sinif riyaziyyatı üzrə 30 video dərs hazırlayıb yerləşdirmişəm: natural ədədlər, adi və onluq kəsrlər, faiz.",
                 "48 abunəçi; ən çox izlənən video 549 baxışdır."])],
@@ -108,7 +108,7 @@ DATA = {
             ("Sheki City Lyceum of Physics, Mathematics and Humanities", "2025 · about 5 months · teaching practice", [
                 "Taught a 5th-grade class; gave online lessons to grades 5-9."]),
             ("SualCavab.com platform", "mathematics and informatics teacher (question author)", [
-                "Prepare graduation, admission and class questions in mathematics and informatics; about 2,000 questions have been prepared so far."]),
+                "I prepare graduation, admission and class questions in mathematics and informatics; I have written about 2,000 questions so far."]),
             ("YouTube channel \"Math1era\"", "independent project · youtube.com/@memm_mova", [
                 "Created and published 30 video lessons for 5th-grade mathematics: natural numbers, common and decimal fractions, percentages.",
                 "48 subscribers; the most-watched video has 549 views."])],
