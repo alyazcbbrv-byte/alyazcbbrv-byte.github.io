@@ -266,14 +266,29 @@ def make_docx(d: dict, path: Path, full: bool = True, photo: Path | None = None)
     doc.save(path)
 
 
+VARIANT2 = {  # version 2: the question-writing work is described without naming the platform
+    "az": ("Test sualları hazırlanması", "riyaziyyat və informatika müəllimi · 2026 iyul - noyabr (5 ay)",
+           ["Riyaziyyat və informatika üzrə buraxılış, qəbul və sinif sualları hazırlamışam; təxminən 2,000-ə yaxın sual."]),
+    "en": ("Question writing", "mathematics and informatics teacher · July - November 2026 (5 months)",
+           ["Wrote graduation, admission and class questions in mathematics and informatics; about 2,000 questions."]),
+}
+
 if __name__ == "__main__":
+    import copy
     import sys
-    full_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else None
-    photo = Path(sys.argv[2]) if len(sys.argv) > 2 else None   # photo only goes into the private versions   # private versions (phone, address, YouTube) go here, never into the repo
-    for k, d in DATA.items():
-        (OUT / f"cv.{k}.html").write_text(make_html(d, False), encoding="utf-8")       # public version for the website
+    full_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else None   # private versions (phone, address, photo) go here, never into the repo
+    photo = Path(sys.argv[2]) if len(sys.argv) > 2 else None
+    variant2 = len(sys.argv) > 3 and sys.argv[3] == "v2"
+    data = copy.deepcopy(DATA)
+    if variant2:
+        for k, d in data.items():
+            d["exp"] = [VARIANT2[k] if e[0].startswith("SualCavab.com") else e for e in d["exp"]]
+            d["file"] = d["file"].replace("Cabbarova_", "Cabbarova_2_")
+    for k, d in data.items():
+        if not variant2:
+            (OUT / f"cv.{k}.html").write_text(make_html(d, False), encoding="utf-8")   # public version for the website
         if full_dir:
             full_dir.mkdir(parents=True, exist_ok=True)
             (full_dir / f"cv.{k}.full.html").write_text(make_html(d, True, photo), encoding="utf-8")
             make_docx(d, full_dir / f"{d['file']}.docx", True, photo)
-        print("built", k)
+        print("built", k, "v2" if variant2 else "")
