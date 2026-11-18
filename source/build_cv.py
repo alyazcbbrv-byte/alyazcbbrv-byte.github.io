@@ -33,7 +33,7 @@ DATA = {
         "skills": [
             ("BI və dashboard", "Power BI, DAX (zaman intellekti, kohort və churn ölçüləri), Power Query (M), ulduz sxemi, PBIP/TMDL"),
             ("SQL", "Join, subquery, CTE (rekursiv daxil), window funksiyaları, sxem dizaynı, bütövlük yoxlamaları"),
-            ("Python", "pandas, NumPy, matplotlib, seaborn, SciPy, statsmodels, Jupyter"),
+            ("Python", "pandas, NumPy, Jupyter; layihələrdə həmçinin matplotlib, seaborn, SciPy, statsmodels istifadə etmişəm"),
             ("Excel", "SUMIFS, INDEX/MATCH, data validation, nativ qrafiklər, düsturla işləyən dashboard"),
             ("Statistika", "Hipotez testləri (chi-square, Kruskal-Wallis, Mann-Whitney, Spearman), bootstrap, RFM, Pareto, proqnoz və backtest"),
             ("Proqramlar", "Word, PowerPoint, Excel, Teams, Zoom, Canva, GeoGebra, Desmos"),
@@ -91,7 +91,7 @@ DATA = {
         "skills": [
             ("BI and dashboards", "Power BI, DAX (time intelligence, cohort and churn measures), Power Query (M), star schema, PBIP/TMDL"),
             ("SQL", "Joins, subqueries, CTEs (incl. recursive), window functions, schema design, integrity checks"),
-            ("Python", "pandas, NumPy, matplotlib, seaborn, SciPy, statsmodels, Jupyter"),
+            ("Python", "pandas, NumPy, Jupyter; in projects I also used matplotlib, seaborn, SciPy, statsmodels"),
             ("Excel", "SUMIFS, INDEX/MATCH, data validation, native charts, formula-driven dashboards"),
             ("Statistics", "Hypothesis tests (chi-square, Kruskal-Wallis, Mann-Whitney, Spearman), bootstrap, RFM, Pareto, forecasting and backtesting"),
             ("Tools", "Word, PowerPoint, Excel, Teams, Zoom, Canva, GeoGebra, Desmos"),
