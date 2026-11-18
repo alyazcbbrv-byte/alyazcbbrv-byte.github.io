@@ -48,10 +48,9 @@ DATA = {
                 "Sənədlər və hesabatlarla işlədim; monitorinqlərin təşkilində iştirak etdim.",
                 "Müəllimlərin sertifikasiya imtahanlarının təşkili prosesində iştirak etdim.",
                 "Məlumatların təhlili və doldurulması: Excel və digər platformalarda."]),
-            ("Şəki şəhər Fizika, Riyaziyyat və Humanitar Fənlər Təmayüllü Lisey", "2025 may-iyun · təcrübə", [
-                "5-ci sinifdə riyaziyyat və informatika tədris etmişəm."]),
-            ("Onlayn dərslər", "5-9-cu siniflər", ["5-9-cu siniflərə onlayn dərslər keçmişəm."]),
-            ("Onlayn repetitorluq", "müstəqil · hazırda", []),
+            ("Şəki şəhər Fizika, Riyaziyyat və Humanitar Fənlər Təmayüllü Lisey", "2025 may-iyun · 2 ay · təcrübə", [
+                "5-ci siniflərdə riyaziyyat və informatika dərsləri keçmişəm."]),
+            ("Onlayn repetitorluq", "müstəqil · hazırda", ["5-9-cu siniflərə onlayn dərslər keçirəm."]),
             ("SualCavab.com platforması", "ortaq müəllim · 2026 iyul - noyabr (5 ay, davam edir)", [
                 "Riyaziyyat və informatika üzrə buraxılış, qəbul və sinif sualları hazırlayıram; bu günə qədər təxminən 2,000-ə yaxın sual hazırlamışam."]),
             ("YouTube kanalı «Math1era»", "müstəqil layihə · youtube.com/@memm_mova", [
@@ -107,10 +106,9 @@ DATA = {
                 "Worked with documents and reports; took part in organising monitoring activities.",
                 "Took part in organising the teacher certification exams.",
                 "Analysed data and entered it in Excel and other platforms."]),
-            ("Sheki City Lyceum of Physics, Mathematics and Humanities", "May-June 2025 · internship", [
-                "Taught mathematics and informatics in a 5th-grade class."]),
-            ("Online lessons", "grades 5-9", ["Gave online lessons to grades 5-9."]),
-            ("Online tutoring", "independent · current", []),
+            ("Sheki City Lyceum of Physics, Mathematics and Humanities", "May-June 2025 · 2 months · internship", [
+                "Taught mathematics and informatics lessons in 5th-grade classes."]),
+            ("Online tutoring", "independent · current", ["Give online lessons to grades 5-9."]),
             ("SualCavab.com platform", "partner teacher · July - November 2026 (5 months, ongoing)", [
                 "I prepare graduation, admission and class questions in mathematics and informatics; I have written about 2,000 questions so far."]),
             ("YouTube channel \"Math1era\"", "independent project · youtube.com/@memm_mova", [
