@@ -144,11 +144,13 @@ CSS = """
 @page { size: A4; margin: 11mm 14mm; }
 * { box-sizing: border-box; }
 body { font-family: "Segoe UI", Calibri, Arial, sans-serif; color: #1f2933; font-size: 9.5pt; line-height: 1.36; margin: 0; }
-header { border-bottom: 3px solid #2a9d8f; padding-bottom: 7px; margin-bottom: 8px; }
+header { border-bottom: 3px solid #2a9d8f; padding-bottom: 7px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.photo { width: 27mm; height: 27mm; border-radius: 50%; object-fit: cover; border: 2px solid #2a9d8f; flex: none; }
 h1 { margin: 0; font-size: 25pt; color: #14213d; }
 .role { font-size: 12.5pt; color: #2a9d8f; font-weight: 600; margin-top: 1px; }
 .contact { margin-top: 5px; font-size: 9pt; color: #3d4a5c; }
-.contact span { margin-right: 12px; white-space: nowrap; }
+.contact span { margin-right: 12px; display: inline-block; }
+header > div:first-child { flex: 1; min-width: 0; }
 h2 { font-size: 10.5pt; color: #14213d; text-transform: uppercase; letter-spacing: 1.2px; border-bottom: 1px solid #d7dde5; padding-bottom: 2px; margin: 12px 0 6px; }
 .skills { display: grid; grid-template-columns: 125px 1fr; gap: 2px 10px; }
 .skills b { color: #14213d; }
@@ -167,10 +169,14 @@ def contact_of(d: dict, full: bool) -> list:
     return c
 
 
-def make_html(d: dict, full: bool = False) -> str:
+def make_html(d: dict, full: bool = False, photo: Path | None = None) -> str:
     e = html.escape
     out = [f'<!doctype html><html lang="{d["lang"]}"><head><meta charset="utf-8"><title>{e(d["name"])}: CV</title><style>{CSS}</style></head><body>']
-    out.append(f'<header><h1>{e(d["name"])}</h1><div class="role">{e(d["role"])}</div><div class="contact">' + "".join(f"<span>{e(c)}</span>" for c in contact_of(d, full)) + "</div></header>")
+    img = ""
+    if photo:
+        import base64
+        img = '<img class="photo" src="data:image/jpeg;base64,' + base64.b64encode(photo.read_bytes()).decode() + '">'
+    out.append(f'<header><div><h1>{e(d["name"])}</h1><div class="role">{e(d["role"])}</div><div class="contact">' + "".join(f"<span>{e(c)}</span>" for c in contact_of(d, full)) + f"</div></div>{img}</header>")
     out.append(f'<h2>{d["h"]["summary"]}</h2><p>{e(d["summary"])}</p>')
     out.append(f'<h2>{d["h"]["skills"]}</h2><div class="skills">' + "".join(f"<b>{e(a)}</b><span>{e(b)}</span>" for a, b in d["skills"]) + "</div>")
     out.append(f'<h2>{d["h"]["edu"]}</h2>')
@@ -194,7 +200,7 @@ def rule(par) -> None:
     b.append(bt); pPr.append(b)
 
 
-def make_docx(d: dict, path: Path, full: bool = True) -> None:
+def make_docx(d: dict, path: Path, full: bool = True, photo: Path | None = None) -> None:
     doc = Document()
     sec = doc.sections[0]
     sec.page_width, sec.page_height = Mm(210), Mm(297)
@@ -211,10 +217,28 @@ def make_docx(d: dict, path: Path, full: bool = True) -> None:
         if align: p.alignment = align
         return p
 
-    para(d["name"], True, 24, NAVY, 0)
-    para(d["role"], True, 12.5, TEAL, 2)
-    para("  ·  ".join(contact_of(d, full)), size=9, after=4)
-    rule(doc.paragraphs[-1])
+    if photo:
+        tbl = doc.add_table(rows=1, cols=2)
+        tbl.autofit = False
+        left, right = tbl.cell(0, 0), tbl.cell(0, 1)
+        left.width, right.width = Mm(146), Mm(32)
+        def cpara(text, bold=False, size=None, color=None, after=2):
+            p = left.add_paragraph(); r = p.add_run(text); r.bold = bold
+            if size: r.font.size = Pt(size)
+            if color: r.font.color.rgb = color
+            p.paragraph_format.space_after = Pt(after)
+        cpara(d["name"], True, 24, NAVY, 0)
+        cpara(d["role"], True, 12.5, TEAL, 2)
+        cpara("  ·  ".join(contact_of(d, full)), size=9, after=4)
+        left._tc.remove(left.paragraphs[0]._p)
+        rp = right.paragraphs[0]; rp.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+        rp.add_run().add_picture(str(photo), width=Mm(28))
+        sep = doc.add_paragraph(); sep.paragraph_format.space_after = Pt(2); rule(sep)
+    else:
+        para(d["name"], True, 24, NAVY, 0)
+        para(d["role"], True, 12.5, TEAL, 2)
+        para("  ·  ".join(contact_of(d, full)), size=9, after=4)
+        rule(doc.paragraphs[-1])
 
     def head(t):
         p = para(t.upper(), True, 10.5, NAVY, 3, 10); rule(p)
@@ -243,11 +267,12 @@ def make_docx(d: dict, path: Path, full: bool = True) -> None:
 
 if __name__ == "__main__":
     import sys
-    full_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else None   # private versions (phone, address, YouTube) go here, never into the repo
+    full_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else None
+    photo = Path(sys.argv[2]) if len(sys.argv) > 2 else None   # photo only goes into the private versions   # private versions (phone, address, YouTube) go here, never into the repo
     for k, d in DATA.items():
         (OUT / f"cv.{k}.html").write_text(make_html(d, False), encoding="utf-8")       # public version for the website
         if full_dir:
             full_dir.mkdir(parents=True, exist_ok=True)
-            (full_dir / f"cv.{k}.full.html").write_text(make_html(d, True), encoding="utf-8")
-            make_docx(d, full_dir / f"{d['file']}.docx", True)
+            (full_dir / f"cv.{k}.full.html").write_text(make_html(d, True, photo), encoding="utf-8")
+            make_docx(d, full_dir / f"{d['file']}.docx", True, photo)
         print("built", k)
