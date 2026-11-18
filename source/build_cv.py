@@ -43,9 +43,18 @@ DATA = {
         "edu": [("Azərbaycan Dövlət Pedaqoji Universiteti (ADPU), Şəki filialı", "2020-2025", ["Riyaziyyat-İnformatika müəllimliyi"]), ("Data analitika kursu", "4 ay, davam edir · məşğulluq xidmətinin dəstəyi ilə",
                  ["Mövzular: Excel, Power BI və DAX, SQL, Python, statistika (Pareto, ABC/XYZ, RFM, kohort analizi, proqnoz).",
                   "Kurs tapşırıqlarını GitHub-da tam layihələrə çevirmişəm (aşağıda)."])],
-        "exp": [("Təhsil İdarəsi", "2024 mart-may · Təhsil Tələbə Kredit Fondunun təcrübə proqramı", []),
-                ("Şəki şəhər Fizika, Riyaziyyat və Humanitar Fənlər Təmayüllü Lisey", "2025 may-iyun · təcrübə", []),
-                ("YouTube kanalı «Math1era»", "müstəqil layihə · youtube.com/@memm_mova", ["5-ci sinif riyaziyyatı üzrə 30 video dərs hazırlayıb yerləşdirmişəm: natural ədədlər, adi və onluq kəsrlər, faiz.", "48 abunəçi; ən çox izlənən video 549 baxışdır."])],
+        "exp": [
+            ("Təhsil İdarəsi", "2024 mart-may · Təhsil Tələbə Kredit Fondunun təcrübə proqramı", [
+                "Sənədlər və hesabatlarla işlədim; monitorinqlərin təşkilində iştirak etdim.",
+                "Müəllimlərin sertifikasiya imtahanlarının təşkili prosesində iştirak etdim.",
+                "Məlumatların təhlili və doldurulması: Excel və digər platformalarda."]),
+            ("Şəki şəhər Fizika, Riyaziyyat və Humanitar Fənlər Təmayüllü Lisey", "2025 · təxminən 5 ay · müəllim təcrübəsi", [
+                "5-ci sinifdə dərs demişəm; 5-9-cu siniflərə onlayn dərslər keçmişəm."]),
+            ("SualCavab.com platforması", "riyaziyyat və informatika müəllimi (sual hazırlayan)", [
+                "Riyaziyyat və informatika üzrə buraxılış, qəbul və sinif sualları hazırlayıram; bu günə qədər təxminən 2,000-ə yaxın sual hazırlanıb."]),
+            ("YouTube kanalı «Math1era»", "müstəqil layihə · youtube.com/@memm_mova", [
+                "5-ci sinif riyaziyyatı üzrə 30 video dərs hazırlayıb yerləşdirmişəm: natural ədədlər, adi və onluq kəsrlər, faiz.",
+                "48 abunəçi; ən çox izlənən video 549 baxışdır."])],
         "proj": [
             ("Mağaza şəbəkəsi: satış, plan və churn analizi", "Power BI, DAX, Python", [
                 "274 mağaza, 50 region, 4 illik gündəlik data (113,829 sətir); ulduz sxemi, 25 DAX ölçüsü, 3 səhifəli dashboard.",
@@ -91,9 +100,18 @@ DATA = {
         "edu": [("Azerbaijan State Pedagogical University (ADPU), Sheki branch", "2020-2025", ["Teacher of Mathematics and Informatics"]), ("Data analytics course", "4 months, ongoing · supported by an employment service programme",
                  ["Topics: Excel, Power BI and DAX, SQL, Python, statistics (Pareto, ABC/XYZ, RFM, cohort analysis, forecasting).",
                   "I turned the course assignments into complete projects on GitHub (below)."])],
-        "exp": [("Education Department", "March-May 2024 · internship, Student Loan Fund programme", []),
-                ("Sheki City Lyceum of Physics, Mathematics and Humanities", "May-June 2025 · internship", []),
-                ("YouTube channel \"Math1era\"", "independent project · youtube.com/@memm_mova", ["Created and published 30 video lessons for 5th-grade mathematics: natural numbers, common and decimal fractions, percentages.", "48 subscribers; the most-watched video has 549 views."])],
+        "exp": [
+            ("Education Department", "March-May 2024 · internship, Student Loan Fund programme", [
+                "Worked with documents and reports; took part in organising monitoring activities.",
+                "Took part in organising the teacher certification exams.",
+                "Analysed data and entered it in Excel and other platforms."]),
+            ("Sheki City Lyceum of Physics, Mathematics and Humanities", "2025 · about 5 months · teaching practice", [
+                "Taught a 5th-grade class; gave online lessons to grades 5-9."]),
+            ("SualCavab.com platform", "mathematics and informatics teacher (question author)", [
+                "Prepare graduation, admission and class questions in mathematics and informatics; about 2,000 questions have been prepared so far."]),
+            ("YouTube channel \"Math1era\"", "independent project · youtube.com/@memm_mova", [
+                "Created and published 30 video lessons for 5th-grade mathematics: natural numbers, common and decimal fractions, percentages.",
+                "48 subscribers; the most-watched video has 549 views."])],
         "proj": [
             ("Retail chain: sales, plan and churn analysis", "Power BI, DAX, Python", [
                 "274 stores, 50 regions, 4 years of daily data (113,829 rows); star schema, 25 DAX measures, 3-page dashboard.",
